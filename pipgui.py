@@ -23,7 +23,7 @@ if menu == '2':
 if menu == '3':
 	uninstpack = input("> ")
 	
-	comman3 = "pip uninstall " + uninstpack
+	command3 = "pip uninstall " + uninstpack
 
 	os.system(command3)
 
@@ -45,9 +45,9 @@ if menu == '4':
 		os.system(command6)
 
 ########### deletes requirements file ##############################
-command7 = "del requirements.txt"
-os.system(command7)
+	command7 = "del requirements.txt"
+	os.system(command7)
 
 ############ cleans pip cache ######################################
-command8 = "pip cache purge"
-os.system(command8)
+	command8 = "pip cache purge"
+	os.system(command8)
