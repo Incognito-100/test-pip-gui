@@ -16,21 +16,21 @@ if menu == '1':
 if menu == '2':
 	instpack = input("> ")
 	
-	command = "pip install " + instpack
+	command2 = "pip install " + instpack
 	
-	os.system(command)
+	os.system(command2)
 
 if menu == '3':
 	uninstpack = input("> ")
 	
-	command = "pip uninstall " + uninstpack
+	comman3 = "pip uninstall " + uninstpack
 
-	os.system(command)
+	os.system(command3)
 
 if menu == '4':
-	command = "pip freeze > requirements.txt"
+	command4 = "pip freeze > requirements.txt"
 
-	os.system(command)
+	os.system(command4)
 	########### makes requirements file #############################
 	
 	reqfile=open('requirements.txt','r')
@@ -39,15 +39,15 @@ if menu == '4':
 
 	for line in file_lines:
 		print(line)
-		command2 = "pip uninstall -r requirements.txt -y"
-		command3 = "cls"
-		os.system(command2)
-		os.system(command3)
+		command5 = "pip uninstall -r requirements.txt -y"
+		command6 = "cls"
+		os.system(command5)
+		os.system(command6)
 
 ########### deletes requirements file ##############################
-command4 = "del requirements.txt"
-os.system(command4)
+command7 = "del requirements.txt"
+os.system(command7)
 
 ############ cleans pip cache ######################################
-command5 = "pip cache purge"
-os.system(command5)
+command8 = "pip cache purge"
+os.system(command8)
