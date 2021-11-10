@@ -12,6 +12,7 @@ menu = input("""
 if menu == '1':
 	command = "pip list"
 	relaunch = "pipgui.py"
+	
 	os.system(command)
 	os.system(relaunch)
 
@@ -19,6 +20,7 @@ if menu == '2':
 	instpack = input("> ")
 	
 	command2 = "pip install " + instpack
+	relaunch = "pipgui.py"
 	
 	os.system(command2)
 	os.system(relaunch)
@@ -27,7 +29,8 @@ if menu == '3':
 	uninstpack = input("> ")
 	
 	command3 = "pip uninstall " + uninstpack
-
+	relaunch = "pipgui.py"
+	
 	os.system(command3)
 	os.system(relaunch)
 
