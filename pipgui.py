@@ -11,7 +11,9 @@ menu = input("""
 
 if menu == '1':
 	command = "pip list"
+	relaunch = "pipgui.py"
 	os.system(command)
+	os.system(relaunch)
 
 if menu == '2':
 	instpack = input("> ")
