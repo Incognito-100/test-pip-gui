@@ -1,6 +1,6 @@
 import os
 import sys
-
+    
 
 menu = input("""
 1) list all packages
@@ -45,7 +45,6 @@ if menu == '4':
 	reqfile.close()
 
 	for line in file_lines:
-		print(line)
 		command5 = "pip uninstall -r requirements.txt -y"
 		command6 = "cls"
 		os.system(command5)
