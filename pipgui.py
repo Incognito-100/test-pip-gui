@@ -21,6 +21,7 @@ if menu == '2':
 	command2 = "pip install " + instpack
 	
 	os.system(command2)
+	os.system(relaunch)
 
 if menu == '3':
 	uninstpack = input("> ")
@@ -28,6 +29,7 @@ if menu == '3':
 	command3 = "pip uninstall " + uninstpack
 
 	os.system(command3)
+	os.system(relaunch)
 
 if menu == '4':
 	command4 = "pip freeze > requirements.txt"
