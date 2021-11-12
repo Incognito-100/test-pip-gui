@@ -30,6 +30,7 @@ def op2():
 	relaunch = "pipgui.py"
 	
 	os.system(command2)
+	os.system('cls')    
 	os.system(relaunch)
 #==========================================|option 3|==========================================#
 def op3():
@@ -39,6 +40,7 @@ def op3():
 	relaunch = "pipgui.py"
 	
 	os.system(command3)
+	os.system('cls')
 	os.system(relaunch)
 #==========================================|option 4|==========================================#
 def op4():
