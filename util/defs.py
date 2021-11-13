@@ -12,6 +12,8 @@ def op1():
 	os.system(command)
 	sleep(3)
 	os.system(relaunch)
+	
+
 #==========================================|option 2|==========================================#
 def op2():
 	instpack = input("> ")
@@ -22,6 +24,8 @@ def op2():
 	os.system(command2)
 	os.system('cls')    
 	os.system(relaunch)
+
+
 #==========================================|option 3|==========================================#
 def op3():
 	uninstpack = input("> ")
@@ -35,8 +39,51 @@ def op3():
 	os.system(command3)
 	os.system('cls')
 	os.system(relaunch)
+
+
 #==========================================|option 4|==========================================#
+
 def op4():
+	print("type requirements file to install must include directory path")
+	
+	instrequfile = input("> ")
+
+	instrequfile2 = "pip install -r " + instrequfile
+	relaunch = "pipgui.py"
+
+	os.system(instrequfile2)
+	os.system(relaunch)
+
+
+#==========================================|option 5|==========================================#
+
+def op5():
+	print("type requirements file to uninstall must include directory path")
+	
+	uninstrequfile = input("> ")
+	
+	uninstrequfile2 = "pip uninstall -r " + uninstrequfile
+	relaunch = "pipgui.py"
+
+	os.system(uninstrequfile2)
+	os.system(relaunch)
+
+
+#==========================================|option 6|==========================================#
+def op6():
+	print("imput the file path to the python project")
+	
+	pipreqssetpath = input("> ")
+	
+	commandpipreqs = "pipreqs" + pipreqssetpath
+	relaunch = "pipgui.py"
+
+	os.system(commandpipreqs)
+	os.system(relaunch)
+
+
+#==========================================|option 7|==========================================#	
+def op7():
 	command4 = "pip freeze > requirements.txt"
 
 	os.system(command4)

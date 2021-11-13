@@ -7,7 +7,9 @@ from util.defs import op1
 from util.defs import op2
 from util.defs import op3
 from util.defs import op4
-
+from util.defs import op5
+from util.defs import op6
+from util.defs import op7
 
 
 ##==========================================|menu|==========================================#
@@ -26,9 +28,12 @@ def mainmenue():
 {Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}
 					{Fore.RESET}[{Fore.GREEN}1{Fore.RESET}]{Fore.BLACK} list all packages                               
 					{Fore.RESET}[{Fore.GREEN}2{Fore.RESET}]{Fore.BLACK} install a package                        
-					{Fore.RESET}[{Fore.GREEN}3{Fore.RESET}]{Fore.BLACK} uninstall a package                
-					{Fore.RESET}[{Fore.GREEN}4{Fore.RESET}]{Fore.RED} uninstall all packages
-					{Fore.RESET}[{Fore.GREEN}5{Fore.RESET}]{Fore.RED} exits the program 
+					{Fore.RESET}[{Fore.GREEN}3{Fore.RESET}]{Fore.BLACK} uninstall a package
+					{Fore.RESET}[{Fore.GREEN}4{Fore.RESET}]{Fore.BLACK} installs a requirements file
+					{Fore.RESET}[{Fore.GREEN}5{Fore.RESET}]{Fore.BLACK} uninstall a requirements file
+					{Fore.RESET}[{Fore.GREEN}6{Fore.RESET}]{Fore.BLACK} generate a requirements file
+					{Fore.RESET}[{Fore.GREEN}7{Fore.RESET}]{Fore.RED} uninstall all packages 
+					{Fore.RESET}[{Fore.GREEN}8{Fore.RESET}]{Fore.RED} exits the program 
 {Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Style.RESET_ALL}'''
 	print(banner)
 	choice = str(input(
@@ -53,11 +58,20 @@ def mainmenue():
 
 
 	elif choice == '5':
+		op5()
+
+	elif choice == '6':
+		op6()
+    
+	elif choice == '7':
+		op7()
+
+
+	elif choice == '8':
 		clear()
 		Style.RESET_ALL
 		Fore.RESET
 		exit()
-
 
 if __name__ == "__main__":
     sleep(1)
