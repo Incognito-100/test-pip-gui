@@ -1,99 +1,64 @@
 import os
 import sys
+from time import sleep
+from colorama import Fore, Style, init
+from util.plugins.common import clear, THIS_VERSION, setTitle
+from util.defs import op1
+from util.defs import op2
+from util.defs import op3
+from util.defs import op4
 
 
-ascii=	""" 
- ██▓███   ██▓ ██▓███       ▄████  █    ██  ██▓
-▓██░  ██▒▓██▒▓██░  ██▒    ██▒ ▀█▒ ██  ▓██▒▓██▒
-▓██░ ██▓▒▒██▒▓██░ ██▓▒   ▒██░▄▄▄░▓██  ▒██░▒██▒
-▒██▄█▓▒ ▒░██░▒██▄█▓▒ ▒   ░▓█  ██▓▓▓█  ░██░░██░
-▒██▒ ░  ░░██░▒██▒ ░  ░   ░▒▓███▀▒▒▒█████▓ ░██░
-▒▓▒░ ░  ░░▓  ▒▓▒░ ░  ░    ░▒   ▒ ░▒▓▒ ▒ ▒ ░▓  
-░▒ ░      ▒ ░░▒ ░          ░   ░ ░░▒░ ░ ░  ▒ ░
-░░        ▒ ░░░          ░ ░   ░  ░░░ ░ ░  ▒ ░
-          ░                    ░    ░      ░  
-                                              
-"""
 
-#==========================================|option 1|==========================================#
-def op1():
-	command = "pip list"
-	relaunch = "pipgui.py"
+##==========================================|menu|==========================================#
+
+def mainmenue():
+	setTitle(f"PIP GUI {THIS_VERSION}")
+	#Main banner
+	clear()
+	banner = Style.BRIGHT + f'''{Fore.LIGHTGREEN_EX}
 	
-	os.system(command)
-	os.system(relaunch)
-#==========================================|option 2|==========================================#
-def op2():
-	instpack = input("> ")
+                                    ____  ________     ________  ______
+                                   / __ \/  _/ __ \   / ____/ / / /  _/
+                                  / /_/ // // /_/ /  / / __/ / / // /  
+                                 / ____// // ____/  / /_/ / /_/ // /   
+                                /_/   /___/_/       \____/\____/___/   
+{Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}
+					{Fore.RESET}[{Fore.GREEN}1{Fore.RESET}]{Fore.BLACK} list all packages                               
+					{Fore.RESET}[{Fore.GREEN}2{Fore.RESET}]{Fore.BLACK} install a package                        
+					{Fore.RESET}[{Fore.GREEN}3{Fore.RESET}]{Fore.BLACK} uninstall a package                
+					{Fore.RESET}[{Fore.GREEN}4{Fore.RESET}]{Fore.RED} uninstall all packages
+					{Fore.RESET}[{Fore.GREEN}5{Fore.RESET}]{Fore.RED} exits the program 
+{Fore.WHITE}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Style.RESET_ALL}'''
+	print(banner)
+	choice = str(input(
+			f'{Fore.GREEN}[{Fore.CYAN}>>>{Fore.GREEN}] {Fore.RESET}Choice: {Fore.LIGHTRED_EX}'))
+
+	#all options 
+	if choice == '1':
+		op1()
+
 	
-	command2 = "pip install " + instpack
-	relaunch = "pipgui.py"
-	
-	os.system(command2)
-	os.system('cls')    
-	os.system(relaunch)
-#==========================================|option 3|==========================================#
-def op3():
-	uninstpack = input("> ")
-	
-	command3 = "pip uninstall " + uninstpack
-	relaunch = "pipgui.py"
-	
-	os.system(command3)
-	os.system('cls')
-	os.system(relaunch)
-#==========================================|option 4|==========================================#
-def op4():
-	command4 = "pip freeze > requirements.txt"
+	elif choice == '2':
+		op2()
 
-	os.system(command4)
-	#==========================================|makes requirements file|==========================================#
-	
-	reqfile=open('requirements.txt','r')
-	file_lines=reqfile.readlines()
-	reqfile.close()
 
-	for line in file_lines:
-		command5 = "pip uninstall -r requirements.txt -y"
-		command6 = "cls"
-		os.system(command5)
-		os.system(command6)
+	elif choice == '3':
+		op3()
 
-	#==========================================|deletes requirements file|==========================================#
-	command7 = "del requirements.txt"
-	os.system(command7)
 
-	#==========================================|clears pip cache|==========================================#
-	command8 = "pip cache purge"
-	os.system(command8)
 
-#==========================================|menu|==========================================#
-print(ascii)
+	elif choice == '4':
+		op4()
 
-menu = input("""
-[1] list all packages
-[2] install a package
-[3] uninstall a package
-[4] uninstall all packages
-> """)
-#==========================================|menu1|==========================================#
-if menu == '1':
-	os.system('cls')
-	op1()
-#==========================================|menu2|==========================================#
 
-if menu == '2':
-	os.system('cls')
-	print("type package to install")
-	op2()
-#==========================================|menu3|==========================================#
+	elif choice == '5':
+		clear()
+		Style.RESET_ALL
+		Fore.RESET
+		exit()
 
-if menu == '3':
-	os.system('cls')
-	print("type package to uninstall")
-	op3()
-#==========================================|menu4|==========================================#
 
-if menu == '4':
-	os.system('cls')
-	op4()
+if __name__ == "__main__":
+    sleep(1)
+    mainmenue()
