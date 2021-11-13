@@ -10,6 +10,7 @@ def op1():
 	relaunch = "pipgui.py"
 	
 	os.system(command)
+	sleep(3)
 	os.system(relaunch)
 #==========================================|option 2|==========================================#
 def op2():
@@ -27,7 +28,10 @@ def op3():
 	
 	command3 = "pip uninstall " + uninstpack
 	relaunch = "pipgui.py"
+	uninsthelp = "pip list"
 	
+	os.system(uninsthelp)
+	sleep(5)
 	os.system(command3)
 	os.system('cls')
 	os.system(relaunch)
