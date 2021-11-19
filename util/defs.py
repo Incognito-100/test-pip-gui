@@ -10,6 +10,7 @@ except ModuleNotFoundError:
 
 
 #==========================================|option 1|==========================================#
+
 def op1():
 	os.system ("pip list")
 	sleep (1)
@@ -17,6 +18,7 @@ def op1():
 	
 
 #==========================================|option 2|==========================================#
+
 def op2():
 	instpack = input("> ")
 
@@ -27,6 +29,7 @@ def op2():
 
 
 #==========================================|option 3|==========================================#
+
 def op3():
 	uninstpack = input("> ")
 	
@@ -57,8 +60,9 @@ def op5():
 
 
 #==========================================|option 6|==========================================#
+
 def op6():
-	print("imput the file path to the python project")
+	print("input the file path to the python project")
 	
 	pipreqssetpath = input("> ")
 	
@@ -67,22 +71,20 @@ def op6():
 
 
 #==========================================|option 7|==========================================#	
+
 def op7():
 	os.system("pip freeze > requirements.txt")
 
-	#==========================================|makes requirements file|==========================================#
+#==========================================|makes requirements file|==========================================#	
 	
-	reqfile=open('requirements.txt','r')
-	file_lines=reqfile.readlines()
-	reqfile.close()
-
-	for line in file_lines:
-		os.system("pip uninstall -r requirements.txt -y")
-		os.system("cls")
+	os.system("pip uninstall -r requirements.txt -y")
+	os.system("cls")
 
 
-	#==========================================|deletes requirements file|==========================================#
+#==========================================|deletes requirements file|==========================================#
+	
 	os.system("del requirements.txt")
 
-	#==========================================|clears pip cache|==========================================#
+#==========================================|clears pip cache|==========================================#
+	
 	os.system("pip cache purge")
