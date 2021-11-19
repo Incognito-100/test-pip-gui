@@ -1,7 +1,4 @@
 import os, sys, platform, ctypes, time
-
-from colorama import Fore
-from time import sleep
 from itertools import cycle
 
 

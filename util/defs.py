@@ -1,7 +1,12 @@
 import os
 import sys
 from time import sleep
-from colorama import Fore, Style, init
+
+#==========================================|auto import/install modules|==========================================#
+try: from colorama import Fore, Style, init
+except ModuleNotFoundError:
+		print(f'\nmodules not found | Installing for you\n')
+		os.system("pip install colorama")
 
 
 #==========================================|option 1|==========================================#

@@ -1,7 +1,6 @@
 import os
 import sys
 from time import sleep
-from colorama import Fore, Style, init
 from util.plugins.common import clear, THIS_VERSION, setTitle
 from util.defs import op1
 from util.defs import op2
@@ -12,11 +11,10 @@ from util.defs import op6
 from util.defs import op7
 
 #==========================================|auto import/install modules|==========================================#
-try: import colorama
+try: from colorama import Fore, Style, init
 except ModuleNotFoundError:
-		print(f'\n{Fore.YELLOW}modules not found | Installing for you{Fore.RESET}\n')
+		print(f'\nmodules not found | Installing for you\n')
 		os.system("pip install colorama")
-		os.system("pip install time")
 
 
 #==========================================|menu|==========================================#
