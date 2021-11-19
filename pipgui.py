@@ -10,6 +10,7 @@ from util.defs import op5
 from util.defs import op6
 from util.defs import op7
 
+
 #==========================================|auto import/install modules|==========================================#
 try: from colorama import Fore, Style, init
 except ModuleNotFoundError:
