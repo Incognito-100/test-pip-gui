@@ -2,7 +2,7 @@ import os, sys, platform, ctypes, time
 from itertools import cycle
 
 
-THIS_VERSION = "1.3"
+THIS_VERSION = "1.5"
 
 def clear():
     system = platform.system()

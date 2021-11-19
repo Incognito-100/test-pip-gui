@@ -7,6 +7,7 @@ try: from colorama import Fore, Style, init
 except ModuleNotFoundError:
 		print(f'\nmodules not found | Installing for you\n')
 		os.system("pip install colorama")
+		os.system("pip install pipreqs")
 
 
 #==========================================|option 1|==========================================#
