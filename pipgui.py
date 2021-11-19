@@ -11,8 +11,15 @@ from util.defs import op5
 from util.defs import op6
 from util.defs import op7
 
+#==========================================|auto import/install modules|==========================================#
+try: import colorama
+except ModuleNotFoundError:
+		print(f'\n{Fore.YELLOW}modules not found | Installing for you{Fore.RESET}\n')
+		os.system("pip install colorama")
+		os.system("pip install time")
 
-##==========================================|menu|==========================================#
+
+#==========================================|menu|==========================================#
 
 def mainmenue():
 	setTitle(f"PIP GUI {THIS_VERSION}")
