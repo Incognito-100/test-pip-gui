@@ -50,19 +50,14 @@ def mainmenue():
 	if choice == '1':
 		op1()
 
-	
 	elif choice == '2':
 		op2()
-
 
 	elif choice == '3':
 		op3()
 
-
-
 	elif choice == '4':
 		op4()
-
 
 	elif choice == '5':
 		op5()
@@ -73,12 +68,14 @@ def mainmenue():
 	elif choice == '7':
 		op7()
 
-
 	elif choice == '8':
 		clear()
 		Style.RESET_ALL
 		Fore.RESET
 		exit()
+
+	elif choice != '1,2,3,4,5,6,7,8':
+        mainmenue()
 
 if __name__ == "__main__":
     sleep(1)
