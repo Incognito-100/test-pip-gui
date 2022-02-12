@@ -74,7 +74,7 @@ def mainmenue():
 		Fore.RESET
 		exit()
 
-	elif choice != '1,2,3,4,5,6,7,8':
+	elif choice == '':
         mainmenue()
 
 if __name__ == "__main__":
