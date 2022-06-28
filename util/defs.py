@@ -23,8 +23,7 @@ def op1():
 def op2():
 	instpack = input("> ")
 
-
-	os.system("pip install " + instpack)
+	os.system(f"pip install {instpack}")
 	os.system("cls")    
 	os.system("pipgui.py")
 
@@ -35,7 +34,7 @@ def op3():
 	uninstpack = input("> ")
 	
 
-	os.system("pip uninstall " + uninstpack)
+	os.system(f"pip uninstall {uninstpack}")
 	os.system("pipgui.py")
 
 #==========================================|option 4|==========================================#
@@ -45,7 +44,7 @@ def op4():
 	
 	instrequfile = input("> ")
 
-	os.system("pip install -r " + instrequfile)
+	os.system(f"pip install -r {instrequfile}")
 	os.system("pipgui.py")
 
 
@@ -56,7 +55,7 @@ def op5():
 	
 	uninstrequfile = input("> ")
 	
-	os.system("pip uninstall -r " + uninstrequfile)
+	os.system(f"pip uninstall -r {uninstrequfile}")
 	os.system("pipgui.py")
 
 
@@ -67,7 +66,7 @@ def op6():
 	
 	pipreqssetpath = input("> ")
 	
-	os.system("pipreqs" + pipreqssetpath)
+	os.system(f"pipreqs {pipreqssetpath}")
 	os.system("pipgui.py")
 
 
