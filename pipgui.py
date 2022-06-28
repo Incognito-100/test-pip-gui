@@ -10,7 +10,6 @@ from util.defs import op5
 from util.defs import op6
 from util.defs import op7
 
-
 #==========================================|auto import/install modules|==========================================#
 try: from colorama import Fore, Style, init
 except ModuleNotFoundError:
@@ -20,7 +19,6 @@ except ModuleNotFoundError:
 
 
 #==========================================|menu|==========================================#
-
 def mainmenue():
 	setTitle(f"PIP GUI {THIS_VERSION}")
 	#Main banner
